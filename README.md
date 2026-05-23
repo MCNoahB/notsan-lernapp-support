@@ -4,14 +4,13 @@ Statische Seiten fuer App Store Connect:
 
 - Support-URL: `https://noahbonaduce.github.io/notsan-lernapp-support/`
 - Datenschutz-URL: `https://noahbonaduce.github.io/notsan-lernapp-support/datenschutz.html`
-- Impressum: `https://noahbonaduce.github.io/notsan-lernapp-support/impressum.html`
 
 ## Vor Veroeffentlichung
 
-1. In `datenschutz.html` und `impressum.html` die ladungsfaehige Anschrift ergaenzen.
-2. E-Mail-Adresse pruefen.
-3. Seite lokal oeffnen und alle Links testen.
-4. Danach die Dateien in ein oeffentliches GitHub-Pages-Repo kopieren, z. B. `notsan-lernapp-support`.
+1. E-Mail-Adresse pruefen.
+2. Seite lokal oeffnen und alle Links testen.
+3. Danach die Dateien in ein oeffentliches GitHub-Pages-Repo kopieren, z. B. `notsan-lernapp-support`.
+4. Fuer eine vollstaendige deutsche Anbieterkennzeichnung spaeter ein Impressum mit ladungsfaehiger Anschrift ergaenzen.
 
 ## Kostenlose Hosting-Optionen
 
