@@ -2,8 +2,8 @@
 
 Statische Seiten fuer App Store Connect:
 
-- Support-URL: `https://noahbonaduce.github.io/notsan-lernapp-support/`
-- Datenschutz-URL: `https://noahbonaduce.github.io/notsan-lernapp-support/datenschutz.html`
+- Support-URL: `https://mcnoahb.github.io/notsan-lernapp-support/`
+- Datenschutz-URL: `https://mcnoahb.github.io/notsan-lernapp-support/datenschutz.html`
 
 ## Vor Veroeffentlichung
 
