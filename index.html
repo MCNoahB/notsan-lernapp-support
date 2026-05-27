@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Support und Hilfe für die NotSan Lern-App – Lern-App für Notfallsanitäter nach SAA/BPR 2025." />
+  <meta name="description" content="Support und Hilfe für die NotSan Lern-App – offline-first Lern-App für Notfallsanitäter nach SAA/BPR 2025 mit optionalem Account, Cloud-Sicherung und Teams." />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#c8102e" />
   <title>Support – NotSan Lern-App</title>
@@ -26,10 +26,18 @@
   <main class="container">
     <h1>Support &amp; Hilfe</h1>
     <p class="lead">
-      Hier findest du Antworten auf häufige Fragen zur NotSan Lern-App
-      sowie Kontaktmöglichkeiten für Fehlerhinweise, Themenwünsche und
-      fachliche Rückmeldungen.
+      Hier findest du Hilfe zur NotSan Lern-App, Kontaktmöglichkeiten für
+      Fehlerhinweise und klare Hinweise zu Account, Cloud-Sicherung, Teams,
+      Premium-Funktionen und Datenschutz.
     </p>
+
+    <div class="callout">
+      <strong>Kurzfassung:</strong>
+      Die Lernfunktionen der App sind offline-first und ohne Login nutzbar.
+      Ein Account, Cloud-Sicherung, Teams, Käufe/Wiederherstellung und
+      Fehlerberichte sind optionale Online-Funktionen und werden in der
+      <a href="datenschutz.html">Datenschutzerklärung</a> erklärt.
+    </div>
 
     <h2>Kontakt</h2>
     <div class="contact-card">
@@ -43,9 +51,46 @@
 
     <h3>Funktioniert die App offline?</h3>
     <p>
-      Ja, vollständig. Es ist kein Account und keine Internetverbindung
-      nötig. Sämtliche Inhalte und dein Lernfortschritt liegen lokal auf
-      deinem Gerät.
+      Ja. Lernen, Wiederholen, Prüfungssimulation, Nachschlagewerk und lokale
+      Statistiken funktionieren ohne Internetverbindung. Online brauchst du
+      nur optionale Funktionen wie Cloud-Login, Cloud-Sicherung, Teams,
+      Käufe/Wiederherstellung und Support-Kontakt.
+    </p>
+
+    <h3>Brauche ich ein Konto?</h3>
+    <p>
+      Nein. Du kannst die App lokal ohne Registrierung nutzen. Ein
+      Cloud-Account ist optional und dient aktuell vor allem der manuellen
+      Cloud-Sicherung und Teamfunktionen. Die Anmeldung läuft per E-Mail und
+      Passwort über Supabase; das Passwort wird nicht im Klartext in der App
+      gespeichert.
+    </p>
+
+    <h3>Welche Daten bleiben lokal?</h3>
+    <p>
+      Lokal gespeichert werden unter anderem dein Lernfortschritt,
+      Wiederholungsintervalle, Review-Historie, Session-Ergebnisse,
+      Fallbeispiel-Verläufe, lokale Accounts, Profilangaben und
+      App-Einstellungen. Ohne Account und ohne Teamfunktionen bleiben diese
+      Daten auf deinem Gerät.
+    </p>
+
+    <h3>Was passiert bei der Cloud-Sicherung?</h3>
+    <p>
+      Wenn du angemeldet bist und die Cloud-Sicherung startest, werden Profil,
+      Einstellungen, Lernfortschritt, Review-Ereignisse, Fallbeispiel-Verläufe
+      und gegebenenfalls Team-Aufgabenfortschritt an Supabase übertragen. In
+      dieser Version gibt es noch keinen automatischen Mehrgeräte-Restore.
+    </p>
+
+    <h3>Wie sichtbar sind meine Teamdaten?</h3>
+    <p>
+      Beim Team-Beitritt wählst du selbst die Sichtbarkeit:
+      <strong>anonym</strong> zählt nur in Gruppenwerten ab 3 Mitgliedern,
+      <strong>namentlich</strong> zeigt dem Teamgründer deinen
+      Aufgabenfortschritt, <strong>keine Daten</strong> erlaubt das Lernen von
+      Teamaufgaben ohne Teamstatistik. Die Auswahl kann später geändert werden;
+      dabei werden bisherige Teamstatistiken für dieses Team gelöscht.
     </p>
 
     <h3>Auf welcher Quelle basieren die Inhalte?</h3>
@@ -59,9 +104,13 @@
 
     <h3>Wie setze ich meinen Lernfortschritt zurück?</h3>
     <p>
-      In der App: <em>Einstellungen → Fortschritt zurücksetzen</em>.
-      Alternativ App deinstallieren – dabei werden alle lokalen Daten
-      vollständig entfernt.
+      In der App kannst du unter <em>Einstellungen</em> den aktiven lokalen
+      Account zurücksetzen oder endgültig löschen. Zurückgesetzte lokale Daten
+      werden 30 Tage ausgeblendet und können in dieser Zeit wiederhergestellt
+      werden. Beim endgültigen Löschen werden lokale Account-Daten sofort
+      entfernt; wenn der lokale Account mit der aktiven Cloud-Session verknüpft
+      ist, versucht die App vorher auch die Cloud-Backup-Daten zu löschen.
+      Alternativ entfernt eine Deinstallation die lokalen App-Daten vom Gerät.
     </p>
 
     <h3>Was bedeutet das Spaced-Repetition-Verfahren (SM-2)?</h3>
@@ -81,8 +130,20 @@
 
     <h3>Werden meine Daten an Server übertragen?</h3>
     <p>
-      Nein. Es gibt keine Cloud-Synchronisation, kein Tracking, keine
-      Analytics. Details siehe <a href="datenschutz.html">Datenschutz</a>.
+      Nur wenn du optionale Online-Funktionen nutzt. Ohne Cloud-Account und
+      ohne Teams bleibt der Lernkern lokal. Bei Account, Cloud-Sicherung,
+      Teamfunktionen, Käufen/Wiederherstellung, Fehlerberichten oder
+      freiwilligen Support-Mails können Daten an Dienstleister übertragen
+      werden. Es gibt kein Werbe-Tracking und keine Analytics zur
+      Profilbildung. Details siehe <a href="datenschutz.html">Datenschutz</a>.
+    </p>
+
+    <h3>Warum sind in der Beta Premium-Funktionen freigeschaltet?</h3>
+    <p>
+      TestFlight-Builds können mit Beta-Vollzugriff laufen, damit Tester die
+      App-Funktionen prüfen können und nicht zuerst eine Paywall testen. Für
+      den späteren öffentlichen App-Store-Betrieb können Premium-Funktionen
+      wieder über Apple/RevenueCat freigeschaltet werden.
     </p>
 
     <div class="callout">
@@ -97,7 +158,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      © 2026 Noah Bonaduce · Letzte Aktualisierung: 23.05.2026
+      © 2026 Noah Bonaduce · Letzte Aktualisierung: 27.05.2026
     </div>
   </footer>
 </body>

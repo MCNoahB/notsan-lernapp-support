@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Datenschutzerklärung der NotSan Lern-App – die App verarbeitet ausschließlich Daten lokal auf deinem Gerät." />
+  <meta name="description" content="Datenschutzerklärung der NotSan Lern-App – offline-first Lern-App mit optionalem Account, Cloud-Sicherung, Teams, Käufen und Fehlerdiagnostik." />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#c8102e" />
   <title>Datenschutz – NotSan Lern-App</title>
@@ -25,14 +25,17 @@
 
   <main class="container">
     <h1>Datenschutzerklärung</h1>
-    <p class="meta">Stand: 23.05.2026</p>
+    <p class="meta">Stand: 27.05.2026</p>
 
     <div class="callout">
       <strong>Kurzfassung:</strong>
-      Diese App sammelt keinerlei personenbezogene Daten. Es gibt keine
-      Konten, kein Tracking, keine Analytics und keine
-      Cloud-Synchronisation. Dein Lernfortschritt bleibt ausschließlich
-      auf deinem Gerät.
+      Die NotSan Lern-App ist offline-first. Du kannst den Lernkern ohne Login
+      nutzen; Lernfortschritt und Einstellungen bleiben dann lokal auf deinem
+      Gerät. Wenn du optionale Online-Funktionen nutzt, etwa Cloud-Account,
+      Cloud-Sicherung, Teams, Käufe/Wiederherstellung, Fehlerdiagnostik oder
+      Support per E-Mail, werden die dafür nötigen Daten verarbeitet und an
+      die unten genannten Dienstleister übertragen. Es gibt kein
+      Werbe-Tracking und keine Analytics zur Profilbildung.
     </div>
 
     <h2>1. Verantwortlicher</h2>
@@ -42,99 +45,216 @@
       <a href="mailto:twobraas@gmail.com">twobraas@gmail.com</a>
     </p>
 
-    <h2>2. Welche Daten werden verarbeitet?</h2>
+    <h2>2. Grundsatz: lokales Lernen ohne Account</h2>
     <p>
-      Die NotSan Lern-App verarbeitet ausschließlich Daten
-      <strong>lokal auf deinem Gerät</strong>. Konkret gespeichert wird:
+      Die App kann ohne Registrierung und ohne Internetverbindung genutzt
+      werden. In diesem lokalen Modus werden Daten ausschließlich auf deinem
+      Gerät verarbeitet, insbesondere:
     </p>
     <ul>
-      <li>dein Lernfortschritt (Antworten, Wiederholungsintervalle, Statistiken)</li>
-      <li>deine App-Einstellungen (z. B. Tagesziel, Theme)</li>
+      <li>lokale Accounts und Anzeigenamen</li>
+      <li>Profilangaben wie Ausbildungsstand, wenn du sie einträgst</li>
+      <li>App-Einstellungen wie Tagesziel, Theme, Erinnerungsstatus und Erinnerungszeit</li>
+      <li>Lernfortschritt, Wiederholungsintervalle, Review-Historie und Statistiken</li>
+      <li>Session-Ergebnisse, Fallbeispiel-Verläufe und Aufgabenfortschritt</li>
+      <li>lokal zwischengespeicherte Berechtigungs- und Premium-Statusdaten</li>
     </ul>
     <p>
-      Diese Daten werden ausschließlich in der lokalen SQLite-Datenbank
-      deines Geräts abgelegt und verlassen das Gerät zu keinem Zeitpunkt.
+      Diese Daten liegen in der lokalen SQLite-Datenbank bzw. im lokalen
+      App-Speicher deines Geräts. Bitte gib in der App keine echten
+      Patientendaten ein; die App ist ein Lernwerkzeug und keine
+      Patientendokumentation.
     </p>
 
-    <h2>3. Welche Daten werden NICHT verarbeitet?</h2>
+    <h2>3. Optionaler Account und Cloud-Sicherung</h2>
+    <p>
+      Wenn du einen Cloud-Account erstellst oder dich anmeldest, nutzt die App
+      Supabase für Authentifizierung und Datenablage. Dabei werden
+      insbesondere deine E-Mail-Adresse, eine Supabase-Nutzer-ID, die
+      Authentifizierungs-Session sowie technische Verbindungsdaten verarbeitet.
+      Dein Passwort wird an Supabase zur Anmeldung/Registrierung übergeben und
+      nicht im Klartext in der App gespeichert.
+    </p>
+    <p>
+      Wenn du eine Cloud-Sicherung startest, können folgende Daten an Supabase
+      übertragen werden:
+    </p>
     <ul>
-      <li>Keine Benutzerkonten, kein Login</li>
-      <li>Kein Tracking, keine Analytics, kein Crash-Reporting an Dritte</li>
-      <li>Keine Werbung, keine Werbe-IDs</li>
-      <li>Keine Cloud-Synchronisation</li>
-      <li>Keine Übermittlung an Server des Anbieters oder an Dritte</li>
+      <li>Profil und Einstellungen</li>
+      <li>eine app-interne Installations-/Geräte-ID, Plattform und App-Version</li>
+      <li>Lernfortschritt pro Frage, Fälligkeitsdaten, Wiederholungswerte und Statistiken</li>
+      <li>Review-Ereignisse wie Frage-ID, Zeitpunkt, Bewertung, Antwortzeit und Lernmodus</li>
+      <li>Fallbeispiel-Fortschritt und Fallläufe mit Entscheidungen, Materialauswahl, gesehenen Vitalwerten und Ergebniszusammenfassung</li>
+      <li>Team-Aufgabenfortschritt, soweit du Teamfunktionen nutzt und deine Sichtbarkeit dies erlaubt</li>
     </ul>
+    <p>
+      In dieser Version ist die Cloud-Sicherung als manuelle Sicherung
+      umgesetzt; ein automatischer Mehrgeräte-Restore ist noch nicht Teil der
+      App.
+    </p>
 
-    <h2>4. Support-Anfragen per E-Mail</h2>
+    <h2>4. Teams und Sichtbarkeit</h2>
+    <p>
+      Teamfunktionen benötigen einen Cloud-Account und eine aktive
+      Supabase-Verbindung. Verarbeitet werden können Teamname,
+      Teambeschreibung, Beitritts-Code, Mitgliedschaft, Beitrittsanfragen,
+      Aufgaben mit Frage-IDs, Fristen, Zielwerten sowie dein gewählter
+      Sichtbarkeitsstatus.
+    </p>
+    <p>
+      Beim Team-Beitritt kannst du wählen:
+    </p>
+    <ul>
+      <li><strong>Anonym:</strong> Fortschritt zählt nur in Gruppenwerten ab 3 Mitgliedern.</li>
+      <li><strong>Namentlich:</strong> Der Teamgründer sieht deinen Aufgabenfortschritt.</li>
+      <li><strong>Keine Daten:</strong> Du kannst Teamaufgaben lernen, ohne Teamstatistiken zu teilen.</li>
+    </ul>
+    <p>
+      Deine Auswahl kann später geändert werden. Beim Wechsel werden bisherige
+      Teamstatistiken für dieses Team gelöscht; die Änderung selbst kann als
+      Consent-Audit lokal und in der Team-Cloud protokolliert werden.
+      Teamgründer können Teamdaten exportieren; namentliche Werte werden nur
+      für Mitglieder mit namentlicher Freigabe berücksichtigt, anonyme Werte
+      nur aggregiert.
+    </p>
+
+    <h2>5. Käufe, Premium und Beta-Vollzugriff</h2>
+    <p>
+      Premium-Funktionen können in TestFlight-Builds über Beta-Vollzugriff
+      ohne Kauf freigeschaltet sein. Für den späteren App-Store-Betrieb ist
+      RevenueCat vorbereitet. Wenn Käufe, Abos, Angebote oder
+      Kaufwiederherstellungen genutzt werden, können Apple und RevenueCat
+      Kaufstatus, Produktkennungen, Beleg-/Transaktionsdaten und technische
+      Nutzer- bzw. Gerätekennungen verarbeiten. Zahlungsdaten werden nicht von
+      dieser App gespeichert.
+    </p>
+
+    <h2>6. Fehlerdiagnostik</h2>
+    <p>
+      Die App kann Sentry zur Fehlerdiagnostik nutzen, wenn in einem Build ein
+      Sentry-DSN konfiguriert ist. Erfasst werden dann technische
+      Fehlerberichte, Stacktraces, App-Version, Build-Nummer, Umgebung,
+      Betriebssystem-/Geräteinformationen, technische Sitzungsdaten,
+      Netzwerkdaten wie die IP-Adresse sowie strukturierte Fehler-Tags. Die App
+      setzt keine Nutzer-ID in Sentry und deaktiviert Standard-PII, Session
+      Replay, Performance-Tracing und Profiling. Lerninhalte,
+      Freitextantworten, Anzeigenamen oder andere Lerndaten sollen nicht an
+      Sentry übergeben werden.
+    </p>
+
+    <h2>7. Lokale Erinnerungen</h2>
+    <p>
+      Wenn du Lernerinnerungen aktivierst, fragt die App nach der
+      iOS-Benachrichtigungsberechtigung und plant lokale Erinnerungen auf
+      deinem Gerät. Es werden keine Marketing-Pushs versendet und keine
+      Hintergrund-Remote-Benachrichtigungen genutzt.
+    </p>
+
+    <h2>8. Support-Anfragen per E-Mail</h2>
     <p>
       Wenn du freiwillig per E-Mail Kontakt aufnimmst, werden die von dir
-      übermittelten Angaben (z. B. E-Mail-Adresse, Nachrichtentext,
-      Screenshots oder Frage-IDs) ausschließlich zur Bearbeitung deiner
-      Anfrage verarbeitet. Die Verarbeitung erfolgt nicht innerhalb der App,
-      sondern über den von dir genutzten E-Mail-Dienst und das Postfach des
-      Anbieters.
+      übermittelten Angaben verarbeitet, z. B. E-Mail-Adresse, Nachrichtentext,
+      Screenshots, Frage-IDs oder technische Hinweise. Die Verarbeitung dient
+      ausschließlich der Bearbeitung deiner Anfrage und erfolgt über den von
+      dir genutzten E-Mail-Dienst sowie das Postfach des Anbieters.
+    </p>
+
+    <h2>9. Was die App nicht macht</h2>
+    <ul>
+      <li>kein Werbe-Tracking und keine personalisierte Werbung</li>
+      <li>keine Werbe-ID-Nutzung</li>
+      <li>keine Standortabfrage</li>
+      <li>kein Zugriff auf Kontakte, Kalender, Kamera oder Mikrofon</li>
+      <li>keine Verarbeitung echter Patientendaten oder Gesundheitsdaten über dich</li>
+      <li>keine Weitergabe von Lerndaten an Arbeitgeber, Schulen oder Teams ohne deine Team-Auswahl</li>
+    </ul>
+
+    <h2>10. Empfänger und Dienstleister</h2>
+    <p>
+      Je nach genutzter Funktion können Daten an folgende Dienstleister
+      übertragen werden:
+    </p>
+    <ul>
+      <li><a href="https://supabase.com/privacy" rel="noopener" target="_blank">Supabase</a> für Authentifizierung, Cloud-Sicherung und Teamdaten</li>
+      <li><a href="https://sentry.io/privacy/" rel="noopener" target="_blank">Sentry</a> für optionale technische Fehlerdiagnostik</li>
+      <li><a href="https://www.revenuecat.com/privacy" rel="noopener" target="_blank">RevenueCat</a> für optionale Premium-/Kaufstatus-Verarbeitung</li>
+      <li><a href="https://www.apple.com/legal/privacy/" rel="noopener" target="_blank">Apple</a> für App-Store-Download, TestFlight, In-App-Käufe und Betriebssystemfunktionen</li>
+      <li>dein bzw. das Anbieter-E-Mail-System bei freiwilligen Support-Anfragen</li>
+    </ul>
+    <p>
+      Diese Dienstleister können Daten auch außerhalb der EU bzw. des EWR
+      verarbeiten. Es gelten zusätzlich deren Datenschutz- und
+      Datenverarbeitungsbedingungen.
+    </p>
+
+    <h2>11. Rechtsgrundlagen</h2>
+    <p>
+      Die lokale Verarbeitung dient der Bereitstellung der App-Funktionen. Die
+      Verarbeitung von Account-, Cloud-, Team- und Kaufdaten erfolgt, soweit
+      erforderlich, zur Bereitstellung der von dir gewählten Funktionen
+      (Art. 6 Abs. 1 lit. b DSGVO). Team-Sichtbarkeit und Erinnerungen beruhen
+      auf deiner aktiven Auswahl bzw. Einwilligung, soweit eine Einwilligung
+      erforderlich ist (Art. 6 Abs. 1 lit. a DSGVO). Support, Sicherheit und
+      Fehlerdiagnostik beruhen auf berechtigten Interessen an Betrieb,
+      Stabilität und Fehlerbehebung (Art. 6 Abs. 1 lit. f DSGVO). Gesetzliche
+      Aufbewahrungspflichten, etwa bei Käufen, bleiben unberührt
+      (Art. 6 Abs. 1 lit. c DSGVO).
+    </p>
+
+    <h2>12. Speicherdauer und Löschung</h2>
+    <p>
+      Lokale App-Daten bleiben gespeichert, solange du die App nutzt. Du
+      kannst lokale Accounts in den Einstellungen zurücksetzen oder endgültig
+      löschen; zurückgesetzte lokale Daten werden 30 Tage ausgeblendet und
+      können in dieser Zeit wiederhergestellt werden. Beim Deinstallieren der
+      App werden lokale App-Daten vom Gerät entfernt.
     </p>
     <p>
-      Support-Anfragen werden gelöscht, sobald sie für die Bearbeitung nicht
-      mehr erforderlich sind, sofern keine gesetzlichen Aufbewahrungspflichten
+      Cloud-Backup-Daten bleiben gespeichert, bis du sie in der App löschen
+      lässt oder eine Löschung per Support anforderst. Teamdaten bleiben
+      gespeichert, solange sie für Teammitgliedschaft, Aufgaben, Nachweis der
+      Sichtbarkeitseinstellung oder Teamverwaltung benötigt werden. Support-
+      E-Mails werden gelöscht, sobald sie für die Bearbeitung nicht mehr
+      erforderlich sind, sofern keine gesetzlichen Aufbewahrungspflichten
       entgegenstehen.
     </p>
 
-    <h2>5. Empfänger / Drittlandübermittlung</h2>
-    <p>
-      App-Daten werden nicht an den Anbieter oder an Dritte übermittelt. Bei
-      einer freiwilligen E-Mail-Anfrage verarbeitet der jeweilige E-Mail-Dienst
-      technische Kommunikationsdaten nach seinen eigenen Bedingungen.
-    </p>
-
-    <h2>6. Speicherdauer</h2>
-    <p>
-      Lokale App-Daten bleiben gespeichert, solange du die App installiert
-      hast. Beim Deinstallieren der App werden alle lokal gespeicherten Daten
-      vollständig gelöscht.
-    </p>
-
-    <h2>7. Deine Rechte nach DSGVO</h2>
+    <h2>13. Deine Rechte nach DSGVO</h2>
     <p>
       Dir stehen die Rechte auf Auskunft, Berichtigung, Löschung,
       Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch
-      zu (Art. 15–22 DSGVO). Da alle Daten ausschließlich lokal auf
-      deinem Gerät liegen, kannst du diese Rechte jederzeit selbst
-      ausüben:
+      zu (Art. 15-22 DSGVO). Soweit Daten lokal auf deinem Gerät liegen,
+      kannst du viele Rechte direkt ausüben:
     </p>
     <ul>
-      <li>App-Einstellungen → <em>Fortschritt zurücksetzen</em>, oder</li>
-      <li>App deinstallieren.</li>
+      <li>lokalen Account zurücksetzen oder endgültig löschen</li>
+      <li>Cloud-Verknüpfung lösen oder Cloud-Daten löschen, wenn die passende Cloud-Session aktiv ist</li>
+      <li>Team-Sichtbarkeit ändern</li>
+      <li>App deinstallieren</li>
     </ul>
     <p>
-      Außerdem hast du das Recht, dich bei einer Datenschutz-Aufsichtsbehörde
-      zu beschweren.
+      Für weitere Auskunfts-, Lösch- oder Korrekturanfragen kannst du dich an
+      <a href="mailto:twobraas@gmail.com">twobraas@gmail.com</a> wenden. Du
+      hast außerdem das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu
+      beschweren.
     </p>
 
-    <h2>8. Apple App Store</h2>
+    <h2>14. Apple App Store und TestFlight</h2>
     <p>
-      Beim Download der App über den Apple App Store verarbeitet
+      Beim Download, bei TestFlight-Nutzung, bei In-App-Käufen oder bei
+      Betriebssystemfunktionen verarbeitet
       <a href="https://www.apple.com/legal/privacy/" rel="noopener" target="_blank">Apple Inc.</a>
-      eigene Daten gemäß ihrer Datenschutzerklärung. Diese Datenverarbeitung
-      erfolgt unabhängig von dieser App und liegt nicht in der
-      Verantwortung des App-Anbieters.
+      eigene Daten gemäß Apples Datenschutzerklärung. Diese Verarbeitung
+      erfolgt unabhängig von dieser App.
     </p>
 
-    <h2>9. Rechtsgrundlage</h2>
-    <p>
-      Die lokale Speicherung auf dem Gerät dient der Funktionsfähigkeit der
-      App. Soweit du freiwillig per E-Mail Kontakt aufnimmst, erfolgt die
-      Verarbeitung zur Bearbeitung deiner Anfrage auf Grundlage von Art. 6
-      Abs. 1 lit. f DSGVO.
-    </p>
-
-    <h2>10. Kontakt</h2>
+    <h2>15. Kontakt</h2>
     <p>
       Fragen zum Datenschutz:
       <a href="mailto:twobraas@gmail.com">twobraas@gmail.com</a>
     </p>
 
-    <h2>11. Änderungen dieser Erklärung</h2>
+    <h2>16. Änderungen dieser Erklärung</h2>
     <p>
       Diese Datenschutzerklärung kann angepasst werden, etwa bei
       Änderungen der App-Funktionalität oder der Rechtslage. Es gilt

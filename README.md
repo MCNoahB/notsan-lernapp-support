@@ -9,7 +9,7 @@ Statische Seiten fuer App Store Connect:
 
 1. E-Mail-Adresse pruefen.
 2. Seite lokal oeffnen und alle Links testen.
-3. Danach die Dateien in ein oeffentliches GitHub-Pages-Repo kopieren, z. B. `notsan-lernapp-support`.
+3. Danach die Dateien in das oeffentliche GitHub-Pages-Repo `notsan-lernapp-support` kopieren und von dort deployen.
 4. Fuer eine vollstaendige deutsche Anbieterkennzeichnung spaeter ein Impressum mit ladungsfaehiger Anschrift ergaenzen.
 
 ## Kostenlose Hosting-Optionen
@@ -18,6 +18,6 @@ Statische Seiten fuer App Store Connect:
 - Cloudflare Pages: ebenfalls kostenlos fuer statische Seiten, sehr grosszuegige Limits, braucht ein Cloudflare-Konto.
 - Netlify: schnell und bequem, Free-Plan mit harten monatlichen Limits; fuer diese kleine Seite ausreichend.
 - Vercel: technisch geeignet, aber Hobby ist eher fuer persoenliche/nichtkommerzielle Projekte gedacht; fuer App-Store-Legal-Seiten weniger meine erste Wahl.
-- Notion Public Page: schnell, aber weniger stabil/professionell als statische HTML-Dateien, URL kann unschoen sein.
-
-Empfehlung: GitHub Pages, weil die Seiten schon statisch vorbereitet sind und App Store Connect nur dauerhaft erreichbare HTTPS-URLs braucht.
+Empfehlung und aktueller Projektstandard: GitHub Pages, weil die Seiten schon
+statisch vorbereitet sind und App Store Connect dauerhaft erreichbare HTTPS-URLs
+braucht. Notion-Public-Pages nicht mehr als Datenschutz-/Support-Handoff nutzen.
